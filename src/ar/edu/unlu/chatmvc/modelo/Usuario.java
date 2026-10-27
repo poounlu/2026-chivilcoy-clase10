@@ -1,6 +1,6 @@
 package ar.edu.unlu.chatmvc.modelo;
 
-public class Usuario {
+public class Usuario implements IUsuario {
     private static int ID = 0;
     private int id;
     private String nombre;
@@ -10,10 +10,12 @@ public class Usuario {
         this.id = Usuario.ID++;
     }
 
+    @Override
     public int getId() {
         return this.id;
     }
 
+    @Override
     public String getNombre() {
         return this.nombre;
     }
